@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_durian"
+    app:startDestination="@id/navigation_d">
+
+    <fragment
+        android:id="@+id/navigation_d"
+        android:name="com.beeeam.durian.DurianFragment"
+        android:label="fragment_durian"
+        tools:layout="@layout/fragment_durian">
+        <action
+            android:id="@+id/action_navigation_d_to_navigation_durian_cookie"
+            app:destination="@id/navigation_durian_cookie" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_durian_cookie"
+        android:name="com.beeeam.durian.DurianCookieFragment"
+        android:label="fragment_durian_cookie"
+        tools:layout="@layout/fragment_durian_cookie">
+        <deepLink app:uri="durian://fragmentDurianCookie" />
+    </fragment>
+</navigation>

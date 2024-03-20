@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_banana"
+    app:startDestination="@id/navigation_b">
+
+    <fragment
+        android:id="@+id/navigation_b"
+        android:name="com.beeeam.banana.BananaFragment"
+        android:label="fragment_banana"
+        tools:layout="@layout/fragment_banana" >
+        <action
+            android:id="@+id/action_navigation_b_to_navigation_banana_bread"
+            app:destination="@id/navigation_banana_bread" />
+        <action
+            android:id="@+id/action_navigation_b_to_navigation_banana_milk"
+            app:destination="@id/navigation_banana_milk" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_banana_bread"
+        android:name="com.beeeam.banana.BananaBreadFragment"
+        android:label="fragment_banana_bread"
+        tools:layout="@layout/fragment_banana_bread"/>
+    <fragment
+        android:id="@+id/navigation_banana_milk"
+        android:name="com.beeeam.banana.BananaMilkFragment"
+        android:label="fragment_banana_milk"
+        tools:layout="@layout/fragment_banana_milk" >
+        <deepLink app:uri="banana://fragmentBananaMilk" />
+    </fragment>
+</navigation>

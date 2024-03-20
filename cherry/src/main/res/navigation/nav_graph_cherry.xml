@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_cherry"
+    app:startDestination="@id/navigation_c">
+
+    <fragment
+        android:id="@+id/navigation_c"
+        android:name="com.beeeam.cherry.CherryFragment"
+        android:label="fragment_cherry"
+        tools:layout="@layout/fragment_cherry" >
+        <action
+            android:id="@+id/action_navigation_c_to_navigation_cherry_image"
+            app:destination="@id/navigation_cherry_image" />
+        <action
+            android:id="@+id/action_navigation_c_to_navigation_cherry_candy"
+            app:destination="@id/navigation_cherry_candy" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_cherry_image"
+        android:name="com.beeeam.cherry.CherryImageFragment"
+        android:label="fragment_cherry_image"
+        tools:layout="@layout/fragment_cherry_image">
+        <deepLink app:uri="cherry://fragmentCherryImage" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_cherry_candy"
+        android:name="com.beeeam.cherry.CherryCandyFragment"
+        android:label="fragment_cherry_candy"
+        tools:layout="@layout/fragment_cherry_candy"/>
+</navigation>

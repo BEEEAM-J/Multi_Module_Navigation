@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_apple"
+    app:startDestination="@id/navigation_a">
+
+    <fragment
+        android:id="@+id/navigation_a"
+        android:name="com.beeeam.apple.AppleFragment"
+        android:label="fragment_apple"
+        tools:layout="@layout/fragment_apple" >
+        <action
+            android:id="@+id/action_navigation_a_to_navigation_apple_pie"
+            app:destination="@id/navigation_apple_pie" />
+        <action
+            android:id="@+id/action_navigation_a_to_navigation_apple_juice"
+            app:destination="@id/navigation_apple_juice" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_apple_juice"
+        android:name="com.beeeam.apple.AppleJuiceFragment"
+        android:label="fragment_apple_juice"
+        tools:layout="@layout/fragment_apple_juice"/>
+    <fragment
+        android:id="@+id/navigation_apple_pie"
+        android:name="com.beeeam.apple.ApplePieFragment"
+        android:label="fragment_apple_pie"
+        tools:layout="@layout/fragment_apple_pie"/>
+</navigation>
